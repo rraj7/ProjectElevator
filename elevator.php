@@ -1,7 +1,7 @@
 <?php
 class Elevator{
     public $elevator_id;
-    public $current_state;
+    public $current_state; //0 - Available 1- Going up 2- Going down 
     public $max_capacity = 10;
     public $current_capacity;
 
@@ -12,12 +12,8 @@ class Elevator{
     }
     
     public function getElevatorStatus(){
-        $status[] = [$this->elevator_id=>$this->current_floor];
+        $status[] = ["Capacity"=>$this->current_capacity,"Current_Floor"=>$this->current_floor];
         return $status;
     }
-
-    public function elevatorMovement(){
-        
-    }
-}
+}   
 ?>
