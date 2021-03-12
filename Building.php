@@ -1,5 +1,6 @@
 <?php
 //Building class which holds the set of all elevators
+
 class Building{
     public $total_elevator = 10;
     public $total_floor = 100;

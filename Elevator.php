@@ -1,4 +1,7 @@
 <?php
+//Elevator Class for an individual elevator
+// Elevaotor inherits Building Class
+
 class Elevator{
     public $elevator_id;
     public $current_state; //0 - Available 1- Going up 2- Going down 

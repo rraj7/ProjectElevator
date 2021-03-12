@@ -44,7 +44,9 @@
 
 
 ### Algorithms 
-    * **First Come First Serve (FCFS)** 
-        * Dispatcher stores requests in a Queue
-        * Scheduler Sends the Elevator to motion 
+    * First Come First Serve (FCFS)
+        - Dispatcher stores requests in a Queue
+        - Scheduler Sends the Elevator to motion 
 
+### Flow 
+    * User -> Building -> Dispatcher -> Elevator
