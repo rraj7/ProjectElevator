@@ -19,8 +19,18 @@ class Dispatcher extends Building{
         var_dump($this->user_destination_queue);    
     }
 
+    //Sets the destination floor from user class
+    public function setDestination(){
+        $this->user_request_destination = $this->user_destination_queue;
+    }
+
     public function determineDestinationDirection($user_destination_queue){
-        $user_current_floor = $this->getUserFloor();
+        if ($user_destination_queue> $this->user_current_floor){
+            $this->upwardRequest();
+        }
+        else {
+            $this->downwardRequest();
+        }
     }
     //Function to handle upward direction request from user
     public function upwardRequest(){

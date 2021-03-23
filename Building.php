@@ -10,7 +10,7 @@ class Building{
     public $total_elevator = 10; //Hardcoded for now
     public $total_floor = 100;  //Hardcoded for now
     public $elevators_array;  //Holds the details of all the elevators
-    public $user_request;   //Holds the single user request floor
+    public $user_request_destination;   //Holds the single user request floor
 
     public function elevatorStatus(){
         foreach ($this->elevators_array as $key => $val){
@@ -21,8 +21,13 @@ class Building{
     }
 
     //Function to call dispatcher
-    public function getDispatcher($user_request){
-        $this->user_request = $user_request; 
+    public function getDispatcher($user_request_destination){
+        $this->user_request_destination = $user_request_destination; 
+    }
+
+    // Get the user's current floor
+    public function getUserFloor($current_floor=null){
+        return $current_floor;
     }
 }
 ?>

@@ -13,6 +13,7 @@ require './User.php';
 $Building = new Building ;
 $Elevator = new Elevator(0);
 $Dispatcher = new Dispatcher;
-$User = new User;
+$User = new User(0);
 
+var_dump($User->callElevator(12));
 ?>

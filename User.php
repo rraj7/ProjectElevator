@@ -7,6 +7,12 @@
 
 class User extends Building{
     public $current_floor;
+
+    public function __construct($current_floor)
+    {
+        $this->current_floor = $current_floor;
+        $this->getUserFloor($current_floor);
+    }
     
     public function callElevator($destinationFloor){
         if ($destinationFloor == $this->current_floor){
