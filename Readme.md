@@ -39,6 +39,8 @@
         * Stop()
     
     * Dispatcher Interface
+        * User Request Queue
+        * Elevator Position Stack
 
     * Monitoring Interface
 
@@ -49,4 +51,4 @@
         - Scheduler Sends the Elevator to motion 
 
 ### Flow 
-    * User -> Building -> Dispatcher -> Elevator
+    * Building : [User -> Dispatcher -> Elevator]

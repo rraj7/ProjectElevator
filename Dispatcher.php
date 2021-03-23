@@ -10,14 +10,18 @@
 // require './User.php';
 
 class Dispatcher extends Building{
-    public $request_queue;  //Holds all the requests from users
+    public $user_destination_queue;  //Holds all the requests from users
+    public $user_current_floor;
 
     public function __construct(){
-        //Constructor to instantiate the Dispatcher with the current user request
-        $user = new User;
-        $this->request_queue[] = $user;
+        //Constructor to instantiate the Dispatcher with the current user destination floor
+        $this->user_destination_queue[] = $this->user_destination_queue;
+        var_dump($this->user_destination_queue);    
     }
 
+    public function determineDestinationDirection($user_destination_queue){
+        $user_current_floor = $this->getUserFloor();
+    }
     //Function to handle upward direction request from user
     public function upwardRequest(){
 
